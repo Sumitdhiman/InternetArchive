@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-T">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive Page</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Tailwind's default sans-serif font */
+            width: 320px; /* A common width for extension popups */
+            min-height: 200px; /* Minimum height */
+            background-color: #f9fafb; /* gray-50 */
+            padding: 0;
+            margin: 0;
+            color: #1f2937; /* gray-800 */
+        }
+        .container {
+            padding: 16px;
+        }
+        .header {
+            background-color: #4f46e5; /* indigo-600 */
+            color: white;
+            padding: 12px 16px;
+            text-align: center;
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* semibold */
+        }
+        .url-display {
+            background-color: #ffffff; /* white */
+            padding: 12px;
+            border-radius: 8px; /* rounded-lg */
+            margin-top: 12px;
+            border: 1px solid #e5e7eb; /* gray-200 */
+            word-break: break-all; /* Prevents long URLs from breaking layout */
+            font-size: 0.875rem; /* text-sm */
+        }
+        .url-display p {
+            margin: 0 0 4px 0;
+            color: #4b5563; /* gray-600 */
+        }
+        .url-display strong {
+            color: #111827; /* gray-900 */
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px; /* rounded-md */
+            text-align: center;
+            font-weight: 500; /* medium */
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            margin-top: 12px;
+            font-size: 0.875rem; /* text-sm */
+            border: none;
+        }
+        .button-primary {
+            background-color: #3b82f6; /* blue-500 */
+            color: white;
+        }
+        .button-primary:hover {
+            background-color: #2563eb; /* blue-600 */
+        }
+        .button-secondary {
+            background-color: #fde68a; /* amber-200 */
+            color: #78350f; /* amber-900 */
+        }
+        .button-secondary:hover {
+            background-color: #fcd34d; /* amber-300 */
+        }
+        .error-message {
+            color: #ef4444; /* red-500 */
+            font-size: 0.875rem; /* text-sm */
+            margin-top: 8px;
+            text-align: center;
+        }
+        .loader {
+            border: 4px solid #f3f4f6; /* gray-100 */
+            border-top: 4px solid #3b82f6; /* blue-500 */
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            margin: 16px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        img
+        {
+            display: block;
+            margin: 16px auto;
+            width: 70%; /* Adjust as needed */
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        Archive Page Helper
+    </div>
+    <div class="container">
+        <div id="loader" class="loader"></div>
+        <div id="content" class="hidden">
+            <div class="url-display">
+                <p>Original URL:</p>
+                <strong id="originalUrl"></strong>
+                <p style="margin-top: 8px;">Archive URL:</p>
+                <strong id="cleanedUrl"></strong>
+            </div>
+
+            <button id="openInArchive" class="button button-primary">
+                Open Archive
+            </button>
+
+             <a href="https://www.buymeacoffee.com/yourwindowsguide" target="_blank">
+        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee">
+    </a>
+            <p id="errorMessage" class="error-message hidden"></p>
+        </div>
+    </div>
+    <script src="scripts/popup.js"></script>
+</body>
+</html>
