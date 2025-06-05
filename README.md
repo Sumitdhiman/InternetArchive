@@ -50,15 +50,24 @@ To install this extension locally in Google Chrome:
 The extension directory should have the following structure:
 
 
-InternetArchie/
+InternetArchivee/
+
 ├── manifest.json         # Defines the extension's properties, permissions, and files.
+
 ├── popup.html            # The HTML structure for the extension's popup.
-├── scripts     
+
+├── scripts 
+
 ├── popup.js              # The JavaScript logic for the popup.
+
 ├── background.js         # The service worker for background tasks (e.g., onInstalled).
+
 └── images/
+
 ├── icon16.png        # 16x16 pixels icon for the extension.
+
 ├── icon48.png        # 48x48 pixels icon for the extension.
+
 └── icon128.png       # 128x128 pixels icon for the extension (used in Chrome Web Store).
 
 
