@@ -62,17 +62,5 @@ InternetArchie/
 └── icon128.png       # 128x128 pixels icon for the extension (used in Chrome Web Store).
 
 
-## ☕ Important: "Buy Me a Coffee" Link
-
-The "Buy Me a Coffee" button in `popup.html` links to a placeholder URL. To make it work:
-
-1.  Open `popup.js`.
-2.  Find the line: `const buyMeACoffeeUsername = 'yourusername';`
-3.  Replace `'yourusername'` with your actual Buy Me a Coffee username.
-    For example: `const buyMeACoffeeUsername = 'johndoe';`
-4.  Save the `popup.js` file.
-5.  Reload the extension from `chrome://extensions` for the change to take effect.
-
----
 
 This README provides a guide to installing, using, and understanding the "Open in archive.today" Chrome extension.
