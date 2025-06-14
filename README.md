@@ -17,7 +17,7 @@ This Browser extension allows users to quickly open the current webpage in [arch
 To install this extension, use these links:
 
 1. **Chrome**: https://chromewebstore.google.com/detail/open-in-the-internet-arch/naanjcmokblngdjjhepfjbalodgdobol
-2. 
+2. **Edge**: 
 3. **Firefox**: https://addons.mozilla.org/en-US/developers/addon/open-in-internet-archive/
 ## 🛠️ How to Use
 
