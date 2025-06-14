@@ -1,8 +1,8 @@
-# 📂 Open Internet Archive - Chrome Extension
+# 📂 Open Internet Archive - A Browser Extension
 
 ## 📜 Overview
 
-This Chrome extension allows users to quickly open the current webpage in [archive.today](https://archive.today) (also known as archive.is). It features a popup interface that displays the original and cleaned URL (query parameters and fragments removed) before opening the archived version. It also includes a "Buy Me a Coffee" link for support.
+This Browser extension allows users to quickly open the current webpage in [archive.today](https://archive.today) (also known as archive.is). It features a popup interface that displays the original and cleaned URL (query parameters and fragments removed) before opening the archived version. It also includes a "Buy Me a Coffee" link for support.
 
 ## ✨ Features
 
@@ -14,26 +14,11 @@ This Chrome extension allows users to quickly open the current webpage in [archi
 
 ## 🚀 Installation
 
-To install this extension locally in Google Chrome:
+To install this extension, use these links:
 
-1.  **Download or Clone Files:**
-    * Ensure you have all the extension files (`manifest.json`, `popup.html`, `popup.js`, `background.js`, and the `images` folder with icons) in a single directory on your computer. Let's call this directory `archiveph_extension`.
-
-2.  **Open Chrome Extensions Page:**
-    * Open Google Chrome.
-    * Navigate to `chrome://extensions` by typing it into the address bar and pressing Enter.
-
-3.  **Enable Developer Mode:**
-    * In the top-right corner of the Extensions page, toggle the **Developer mode** switch to the "on" position.
-
-4.  **Load Unpacked Extension:**
-    * Click the **"Load unpacked"** button that appears.
-    * In the file dialog, navigate to and select the `archiveph_extension` directory you created/downloaded.
-    * Click "Select Folder".
-
-5.  **Extension Ready:**
-    * The "Open in archive.today" extension should now appear in your list of extensions and its icon should be visible in the Chrome toolbar.
-
+1. **Chrome**: https://chromewebstore.google.com/detail/open-in-the-internet-arch/naanjcmokblngdjjhepfjbalodgdobol
+2. 
+3. **Firefox**: https://addons.mozilla.org/en-US/developers/addon/open-in-internet-archive/
 ## 🛠️ How to Use
 
 1.  Navigate to any webpage you wish to archive (e.g., `https://example.com/article?ref=news`).
