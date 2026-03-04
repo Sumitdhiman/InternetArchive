@@ -1,5 +1,22 @@
 // popup.js
 
+async function getUrl() {
+    // First, try to get the active tab in the current window
+    let tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (tabs && tabs.length > 0 && tabs[0].url) {
+        return tabs[0].url;
+    }
+
+    // If that fails, try to get the active tab in the last focused window
+    tabs = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
+    if (tabs && tabs.length > 0 && tabs[0].url) {
+        return tabs[0].url;
+    }
+
+    // If that also fails, return null
+    return null;
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const originalUrlElement = document.getElementById('originalUrl');
     const cleanedUrlElement = document.getElementById('cleanedUrl');
@@ -41,11 +58,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     showLoader(true); // Show loader initially
 
     try {
-        // Get the current active tab
-        const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+        const pageUrl = await getUrl();
 
-        if (tabs && tabs.length > 0 && tabs[0].url) {
-            let pageUrl = tabs[0].url;
+        if (pageUrl) {
             console.log('Current URL:', pageUrl); // Debug log
             
             if (originalUrlElement) {

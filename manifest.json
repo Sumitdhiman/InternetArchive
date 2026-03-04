@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Open in the Internet Archive",
-  "version": "3.0",
-  "description": "Opens the current open page's archive.",
+  "name": "Internet Archive - Paywall bypass and archive access",
+  "version": "3.0.1",
+  "description": "Access archived versions of any webpage instantly. Bypass paywalls, view deleted content, and explore web history with one click.",
   "permissions": [
     "activeTab",
     "tabs",
@@ -22,7 +22,7 @@
         "default": "Ctrl+Shift+F",
         "mac": "Command+Shift+F"
       },
-      "description": "Opens the current open page's archive."
+      "description": "Open the Popup/Archive."
     }
   },
   "icons": {
