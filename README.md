@@ -1,60 +1,102 @@
-# 📂 Open Internet Archive - A Browser Extension
+# Open in the Internet Archive
 
-## 📜 Overview
+A Chrome extension that lets you instantly open the Internet Archive ([archive.today](https://archive.today)) version of any web page — via a keyboard shortcut, toolbar popup, or right-click context menu.
 
-This Browser extension allows users to quickly open the current webpage in [archive.today](https://archive.today) (also known as archive.is). It features a popup interface that displays the original and cleaned URL (query parameters and fragments removed) before opening the archived version. It also includes a "Buy Me a Coffee" link for support.
+---
 
-## ✨ Features
+## Features
 
-* **Popup Interface:** Clicking the extension icon opens a popup.
-* **URL Cleaning:** Automatically removes URL query parameters (e.g., `?source=facebook`) and fragments (e.g., `#section`) before sending to archive.today.
-* **Displays URLs:** Shows both the original and the cleaned URL in the popup.
-* **One-Click Archive:** Easily open the cleaned URL in archive.today.
-* **Support Link:** Includes a "Buy Me a Coffee" button.
+- **Keyboard shortcut** — Open the archive of the current page in one keystroke
+- **Toolbar popup** — Preview the original and cleaned archive URL before opening
+- **Right-click context menu** — Archive any page, link, image, video, or audio source
+- **URL cleaning** — Automatically strips query parameters and fragments for cleaner archive links
+- **Welcome page** — Shown once on install with usage instructions and no repeat interruptions
 
-## 🚀 Installation
+---
 
-To install this extension, use these links:
+## Usage
 
-1. **Chrome**: https://chromewebstore.google.com/detail/open-in-the-internet-arch/naanjcmokblngdjjhepfjbalodgdobol
-2. **Edge**: 
-3. **Firefox**: https://addons.mozilla.org/en-US/developers/addon/open-in-internet-archive/
-## 🛠️ How to Use
+### Keyboard Shortcut
 
-1.  Navigate to any webpage you wish to archive (e.g., `https://example.com/article?ref=news`).
-2.  Click the "Open in archive.today" extension icon in your Chrome toolbar.
-3.  A popup will appear, showing:
-    * **Original URL:** The full URL of the current page.
-    * **Cleaned URL for Archive:** The URL with query parameters and fragments removed (e.g., `https://example.com/article`).
-4.  Click the **"Open in archive.today"** button in the popup.
-5.  A new tab will open with the archive.today version of the cleaned URL.
-6.  Optionally, you can click the "Buy Me a Coffee" button to support the developer. 
+| Platform | Shortcut |
+|---|---|
+| Windows / Linux | `Ctrl` + `Shift` + `F` |
+| macOS | `Cmd` + `Shift` + `F` |
 
-## 📁 File Structure
+Pressing the shortcut on any `http`/`https` page immediately opens the archived version in a new tab.
 
-The extension directory should have the following structure:
+> You can customize this shortcut at any time via `chrome://extensions/shortcuts`.
 
+### Toolbar Icon
 
-InternetArchivee/
+Click the extension icon in the Chrome toolbar to open the popup. The popup shows:
+- The **original URL** of the current page
+- The **cleaned archive URL** that will be opened
+- A button to open the archive
 
-├── manifest.json         # Defines the extension's properties, permissions, and files.
+### Right-Click Menu
 
-├── popup.html            # The HTML structure for the extension's popup.
+Right-click anywhere on a page to access **"Open in Internet Archive"** from the context menu. Works on:
+- The current page
+- Hyperlinks
+- Images
+- Videos and audio
 
-├── scripts 
+---
 
-├── popup.js              # The JavaScript logic for the popup.
+## Installation
 
-├── background.js         # The service worker for background tasks (e.g., onInstalled).
+### From Source (Developer Mode)
 
-└── images/
+1. Clone or download this repository.
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable **Developer mode** (toggle in the top-right corner).
+4. Click **Load unpacked** and select the project folder.
+5. The extension is now active. A welcome page will open automatically.
 
-├── icon16.png        # 16x16 pixels icon for the extension.
+---
 
-├── icon48.png        # 48x48 pixels icon for the extension.
+## Permissions
 
-└── icon128.png       # 128x128 pixels icon for the extension (used in Chrome Web Store).
+| Permission | Reason |
+|---|---|
+| `activeTab` | Read the URL of the current tab when the popup is opened |
+| `tabs` | Read the URL of the current tab when the keyboard shortcut is used |
+| `scripting` | Required by Manifest V3 for tab interactions |
+| `contextMenus` | Register the right-click context menu item |
 
+---
 
+## Project Structure
 
-This README provides a guide to installing, using, and understanding the "Open in archive.today" Chrome extension.
+```
+├── manifest.json           Extension manifest (MV3)
+├── popup.html              Toolbar popup UI
+├── welcome.html            First-install welcome page
+├── options.html            Options/settings page
+└── assets/
+    ├── scripts/
+    │   ├── background.js   Service worker (context menu, keyboard shortcut, install hook)
+    │   ├── popup.js        Popup logic
+    │   └── options.js      Options page logic
+    ├── styles/
+    │   └── styles.css      Shared styles
+    └── images/
+        ├── icon16.png
+        ├── icon48.png
+        └── icon128.png
+```
+
+---
+
+## Support
+
+If this extension is useful to you, consider supporting its development:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Support-5955D1?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/yourwindowsguide)
+
+---
+
+## License
+
+This project is open-source. See [LICENSE](LICENSE) for details.
