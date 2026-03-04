@@ -1,0 +1,188 @@
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #FDFDFF 0%, #F8F7FF 100%);
+            color: #29294B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px 16px;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 24px 60px rgba(41, 41, 75, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(180deg, #29294B 0%, #3d3d6e 100%);
+            color: #FFFFFF;
+            padding: 32px 36px 28px;
+            text-align: center;
+        }
+
+        .header-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: #FFFFFF;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 1rem;
+            opacity: 0.85;
+            font-weight: 400;
+        }
+
+        /* Body */
+        .body {
+            padding: 32px 36px;
+        }
+
+        /* How to use */
+        .section-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #696981;
+            margin: 0 0 14px;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: #F2F2F6;
+            border: 1px solid #E1E1E8;
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(180deg, #9895FF 0%, #514DCC 100%);
+            color: #FFFFFF;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            padding-top: 4px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #29294B;
+        }
+
+        .step-text strong {
+            font-weight: 600;
+        }
+
+        kbd {
+            background: #FFFFFF;
+            border: 1px solid #E1E1E8;
+            border-bottom: 2px solid #c4c4d4;
+            border-radius: 5px;
+            padding: 1px 7px;
+            font-family: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #696981;
+        }
+
+        /* Divider */
+        .divider {
+            border: none;
+            border-top: 1px solid #E1E1E8;
+            margin: 0 0 28px;
+        }
+
+        /* Support section */
+        .support-section {
+            text-align: center;
+        }
+
+        .support-section p {
+            margin: 0 0 18px;
+            font-size: 0.95rem;
+            color: #696981;
+            line-height: 1.6;
+        }
+
+        .coffee-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(180deg, #9895FF 0%, #514DCC 100%);
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(89, 85, 209, 0.35);
+        }
+
+        .coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(89, 85, 209, 0.45);
+        }
+
+        .coffee-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+        }
+
+        /* Footer note */
+        .footer-note {
+            text-align: center;
+            padding: 18px 36px;
+            border-top: 1px solid #E1E1E8;
+            background: #F8F7FF;
+            font-size: 0.8rem;
+            color: #696981;
+        }
+   
